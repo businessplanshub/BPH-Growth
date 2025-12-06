@@ -1,4 +1,8 @@
 import { PrismaClient } from '@prisma/client'
+import dotenv from 'dotenv'
+
+// Ensure environment variables are loaded
+dotenv.config()
 
 const prisma = new PrismaClient({
   log: ['warn', 'error'],
@@ -26,7 +30,7 @@ async function disconnectDatabase() {
   console.log('📊 Database disconnected')
 }
 
-process.on('beforeExit', disconnectDatabase)
+// process.on('beforeExit', disconnectDatabase)
 process.on('SIGINT', disconnectDatabase)
 process.on('SIGTERM', disconnectDatabase)
 
