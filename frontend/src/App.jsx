@@ -4,6 +4,7 @@ import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import Services from './pages/Services'
 import BPHGrowthFund from './pages/BPHGrowthFund'
+import BPHFunds from './pages/BPHFunds'
 import ContactUs from './pages/ContactUs'
 import Blogs from './pages/Blogs'
 import FAQs from './pages/FAQs'
@@ -53,6 +54,7 @@ function App() {
         <Route path="/about-us" element={<AboutUs />} />
         <Route path="/services" element={<Services />} />
         <Route path="/bph-growth-fund" element={<BPHGrowthFund />} />
+        <Route path="/bph-funds" element={<BPHFunds />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/faqs" element={<FAQs />} />
