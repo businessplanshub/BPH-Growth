@@ -26,10 +26,10 @@ async function initializeApp() {
     // Connect to database
     await connectDatabase()
     console.log('✅ Database connected successfully')
-    
+
     // Create admin accounts
     await createAdminAccounts()
-    
+
   } catch (error) {
     console.error('❌ Application initialization failed:', error)
     process.exit(1)
@@ -42,8 +42,7 @@ initializeApp()
 // Middleware
 app.use(cors({
   origin: [
-    'http://localhost:5173',
-    'https://bph-growth-frontend-website.onrender.com' 
+    'https://bphgrowth.com'
   ],
   credentials: true
 }))
