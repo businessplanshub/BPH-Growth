@@ -57,16 +57,6 @@ app.use((req, res, next) => {
   next()
 })
 
-// Needed for __dirname in ES modules
-const __filename = fileURLToPath(import.meta.url)
-const _dirname = path.dirname(_filename)
-
-// Serve frontend build
-app.use(express.static(path.join(__dirname, 'dist')))
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'dist/index.html'))
-})
-
 // Basic routes
 app.get('/', (req, res) => {
   res.json({
