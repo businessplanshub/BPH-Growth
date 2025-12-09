@@ -13,6 +13,8 @@ import resourceRoutes from './src/routes/resourceRoutes.js'
 import slotRoutes from './src/routes/slotRoutes.js'
 import insightRoutes from './src/routes/insightRoutes.js'
 import faqRoutes from './src/routes/faqRoutes.js'
+import path from 'path'
+import { fileURLToPath } from 'url'
 
 // Load environment variables
 dotenv.config()
@@ -53,6 +55,16 @@ app.use(express.urlencoded({ extended: true }))
 app.use((req, res, next) => {
   console.log(`${req.method} ${req.path}`)
   next()
+})
+
+// Needed for __dirname in ES modules
+const __filename = fileURLToPath(import.meta.url)
+const _dirname = path.dirname(_filename)
+
+// Serve frontend build
+app.use(express.static(path.join(__dirname, 'dist')))
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'dist/index.html'))
 })
 
 // Basic routes
