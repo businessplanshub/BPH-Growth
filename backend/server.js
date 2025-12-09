@@ -44,7 +44,8 @@ initializeApp()
 // Middleware
 app.use(cors({
   origin: [
-    'https://bphgrowth.com'
+    'https://bphgrowth.com',
+    'https://bphgrowth.netlify.app'
   ],
   credentials: true
 }))
