@@ -45,7 +45,8 @@ initializeApp()
 app.use(cors({
   origin: [
     'https://bphgrowth.com',
-    'https://bphgrowth.netlify.app'
+    'https://bphgrowth.netlify.app',
+    'https://bph-growth-frontend.onrender.com'
   ],
   credentials: true
 }))
