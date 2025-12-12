@@ -44,11 +44,10 @@ initializeApp()
 // Middleware
 app.use(cors({
   origin: [
-    'http://localhost:5173'
-    // 'https://bphgrowth.com',
-    // "https://www.bphgrowth.com",
-    // 'https://bphgrowth.netlify.app',
-    // 'https://bph-growth-frontend.onrender.com'
+    'https://bphgrowth.com',
+    "https://www.bphgrowth.com",
+    'https://bphgrowth.netlify.app',
+    'https://bph-growth-frontend.onrender.com'
   ],
   credentials: true
 }))
