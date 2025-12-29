@@ -55,6 +55,7 @@ function App() {
         <Route path="/bph-growth-fund" element={<BPHGrowthFund />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<Blogs />} />
         <Route path="/faqs" element={<FAQs />} />
         <Route path="/resource-center" element={<ResourceCenter />} />
         <Route path="/company-policies" element={<CompanyPolicies />} />
@@ -63,16 +64,16 @@ function App() {
         {/* Admin Routes */}
         <Route path="/admin/login" element={<AdminLogin />} />
         <Route path="/admin/dashboard" element={<AdminDashboard />} />
-        
+
         {/* Consultation Admin Routes */}
         <Route path="/admin/consultation-login" element={<ConsultationAdminLogin />} />
         <Route path="/admin/consultations" element={<ConsultationApplications />} />
         <Route path="/admin/slots" element={<SlotManagement />} /> {/* ADD THIS */}
-        
+
         {/* Loan Admin Routes */}
         <Route path="/admin/loan-login" element={<LoanAdminLogin />} />
         <Route path="/admin/loans" element={<LoanApplications />} />
-        
+
         {/* Other Admin Routes */}
         <Route path="/admin/faqs" element={<FAQManager />} />
         <Route path="/admin/insights" element={<InsightsManager />} />

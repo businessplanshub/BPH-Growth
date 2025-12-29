@@ -398,7 +398,7 @@ function CompanyPolicies() {
             </p>
             <div className="space-y-3 text-gray-700">
               <p><strong>BPH Growth Fund</strong></p>
-              <p>Email: <a href="mailto:legal@bphgrowthfund.com" className="text-blue-600 hover:text-blue-800 underline">support@bphgrowth.com</a></p>
+              <p>Email: <a href="mailto:legal@bphgrowthfund.com" className="text-blue-600 hover:text-blue-800 underline">info@bphgrowth.com</a></p>
               <p>Phone: <a href="tel:+2348012345678" className="text-blue-600 hover:text-blue-800">+234 708 009 6148</a></p>
             </div>
           </div>

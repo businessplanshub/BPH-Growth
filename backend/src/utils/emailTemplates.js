@@ -57,14 +57,14 @@ export const consultationUserTemplate = ({ fullName, scheduledDate, scheduledTim
             </ul>
           </div>
           
-          <p>If you have any immediate questions, please don't hesitate to reach out to us at support@bphgrowth.com</p>
+          <p>If you have any immediate questions, please don't hesitate to reach out to us at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Looking forward to working with you,<br>The BPH Growth Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -191,14 +191,14 @@ export const consultationApprovalTemplate = ({ fullName, scheduledDate, schedule
             <p>Our team will reach out to you via email or phone 24 hours before the consultation to confirm the meeting format and provide any necessary joining details.</p>
           </div>
           
-          <p>If you need to reschedule or have any questions, please contact us at support@bphgrowth.com</p>
+          <p>If you need to reschedule or have any questions, please contact us at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Looking forward to working with you,<br>The BPH Growth Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -264,14 +264,14 @@ export const consultationDenialTemplate = ({ fullName, companyName }) => {
           
           <p>We appreciate your understanding and encourage you to stay connected with BPH Growth through our resources and content.</p>
           
-          <p>For any questions, feel free to reach out to us at support@bphgrowth.com</p>
+          <p>For any questions, feel free to reach out to us at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Best regards,<br>The BPH Growth Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -344,14 +344,14 @@ export const personalLoanUserTemplate = ({ fullName, loanAmount }) => {
             </ul>
           </div>
           
-          <p>If you have any questions in the meantime, please contact us at support@bphgrowth.com</p>
+          <p>If you have any questions in the meantime, please contact us at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Best regards,<br>The BPH Growth Loan Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -469,14 +469,14 @@ export const personalLoanApprovalTemplate = ({ fullName, loanAmount }) => {
           
           <p>We're thrilled to support your financial needs!</p>
           
-          <p>If you have immediate questions, please contact our loan team at support@bphgrowth.com</p>
+          <p>If you have immediate questions, please contact our loan team at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Congratulations and best wishes,<br>The BPH Growth Loan Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -541,14 +541,14 @@ export const personalLoanDenialTemplate = ({ fullName }) => {
           
           <p>We appreciate your interest in BPH Growth and encourage you to stay connected with us.</p>
           
-          <p>For questions, contact us at support@bphgrowth.com</p>
+          <p>For questions, contact us at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Best regards,<br>The BPH Growth Loan Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -621,14 +621,14 @@ export const businessLoanUserTemplate = ({ fullName, businessName, loanAmount })
             </ul>
           </div>
           
-          <p>If you have any questions in the meantime, please contact us at support@bphgrowth.com</p>
+          <p>If you have any questions in the meantime, please contact us at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Best regards,<br>The BPH Growth Loan Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -746,14 +746,14 @@ export const businessLoanApprovalTemplate = ({ fullName, businessName, loanAmoun
           
           <p>This is an exciting step for <strong>${businessName}</strong>! We're thrilled to support your business growth.</p>
           
-          <p>If you have immediate questions, please contact our loan team at support@bphgrowth.com</p>
+          <p>If you have immediate questions, please contact our loan team at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Congratulations and best wishes,<br>The BPH Growth Loan Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -818,14 +818,14 @@ export const businessLoanDenialTemplate = ({ fullName, businessName }) => {
           
           <p>We appreciate your interest in BPH Growth and encourage you to stay connected with us. Our team is here to support your business growth in other ways.</p>
           
-          <p>For questions or to discuss alternative options, contact us at support@bphgrowth.com</p>
+          <p>For questions or to discuss alternative options, contact us at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Best regards,<br>The BPH Growth Loan Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 
@@ -899,14 +899,14 @@ export const resourceDownloadTemplate = ({ email, resourceTitle, downloadUrl }) 
             </ul>
           </div>
           
-          <p>If you have any questions or need assistance, feel free to reach out to us at support@bphgrowth.com</p>
+          <p>If you have any questions or need assistance, feel free to reach out to us at info@bphgrowth.com</p>
           
           <p style="margin-top: 30px;">Best regards,<br>The BPH Growth Team</p>
         </div>
         <div class="footer">
           <div class="footer-content">
             <p>BPH Growth</p>
-            <a href="mailto:support@bphgrowth.com">support@bphgrowth.com</a>
+            <a href="mailto:info@bphgrowth.com">info@bphgrowth.com</a>
           </div>
           <div class="social-links">
             <a href="https://www.instagram.com/businessplans.hub/">Instagram</a> | 

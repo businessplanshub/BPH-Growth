@@ -397,7 +397,7 @@ export const submitLoan = async (req, res) => {
         
         // 1. Send confirmation to CUSTOMER
         // FROM: noreply@bphgrowth.com
-        // REPLY-TO: support@bphgrowth.com
+        // REPLY-TO: info@bphgrowth.com
         await sendCustomerEmail({
           to: userEmail,
           subject: `${loanData.loanType} Application Received - BPH Growth`,
@@ -409,9 +409,9 @@ export const submitLoan = async (req, res) => {
 
         // 2. Send alert to ADMIN
         // FROM: noreply@bphgrowth.com
-        // TO: support@bphgrowth.com
+        // TO: info@bphgrowth.com
         await sendAdminEmail({
-          to: process.env.EMAIL_ADMIN || 'support@bphgrowth.com',
+          to: process.env.EMAIL_ADMIN || 'info@bphgrowth.com',
           subject: `🔔 New ${loanData.loanType} Application - ${loanData.fullName}`,
           html: personalLoanAdminTemplate({
             fullName: loanData.fullName,
@@ -426,7 +426,7 @@ export const submitLoan = async (req, res) => {
         
         // 1. Send confirmation to CUSTOMER
         // FROM: noreply@bphgrowth.com
-        // REPLY-TO: support@bphgrowth.com
+        // REPLY-TO: info@bphgrowth.com
         await sendCustomerEmail({
           to: userEmail,
           subject: `${loanData.loanType} Application Received - BPH Growth`,
@@ -439,9 +439,9 @@ export const submitLoan = async (req, res) => {
 
         // 2. Send alert to ADMIN
         // FROM: noreply@bphgrowth.com
-        // TO: support@bphgrowth.com
+        // TO: info@bphgrowth.com
         await sendAdminEmail({
-          to: process.env.EMAIL_ADMIN || 'support@bphgrowth.com',
+          to: process.env.EMAIL_ADMIN || 'info@bphgrowth.com',
           subject: `🔔 New ${loanData.loanType} Application - ${loanData.businessName}`,
           html: businessLoanAdminTemplate({
             fullName: loanData.fullName,
@@ -564,7 +564,7 @@ export const approveLoan = async (req, res) => {
 
     // Send approval email to CUSTOMER based on loan type
     // FROM: noreply@bphgrowth.com
-    // REPLY-TO: support@bphgrowth.com
+    // REPLY-TO: info@bphgrowth.com
     try {
       if (isPersonalLoan(loanType)) {
         // PERSONAL LOAN APPROVAL
@@ -629,7 +629,7 @@ export const denyLoan = async (req, res) => {
 
     // Send denial email to CUSTOMER based on loan type
     // FROM: noreply@bphgrowth.com
-    // REPLY-TO: support@bphgrowth.com
+    // REPLY-TO: info@bphgrowth.com
     try {
       if (isPersonalLoan(loanType)) {
         // PERSONAL LOAN DENIAL

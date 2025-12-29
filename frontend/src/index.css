@@ -1,6 +1,98 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+* {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.line-clamp-2 {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3; 
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.overflow-y-auto::-webkit-scrollbar {
+  width: 8px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 10px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 10px;
+}
+
+.overflow-y-auto::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10px;
+}
+
+@keyframes slideDownFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUpFadeOut {
+  0% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+}
+
+.animate-slideDownFadeIn {
+  animation: slideDownFadeIn 0.4s ease-out forwards;
+}
+
+.animate-slideUpFadeOut {
+  animation: slideUpFadeOut 0.3s ease-in forwards;
+} */
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
 
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
 @keyframes fadeIn {
   from {
@@ -88,4 +180,44 @@ html {
 
 .animate-slideUpFadeOut {
   animation: slideUpFadeOut 0.3s ease-in forwards;
+}
+
+/* Blog/Prose content styling */
+.prose {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  line-break: normal;
+}
+
+.prose p,
+.prose li,
+.prose span,
+.prose strong,
+.prose em,
+.prose b,
+.prose i {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: normal;
+  white-space: normal;
+}
+
+.prose * {
+  max-width: 100%;
+}
+
+/* Fix for pasted Word content */
+.prose p {
+  margin-bottom: 1em;
+  text-align: left;
+}
+
+.prose ol,
+.prose ul {
+  padding-left: 1.5em;
+}
+
+.prose li {
+  margin-bottom: 0.5em;
 }

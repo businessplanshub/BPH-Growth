@@ -58,7 +58,7 @@ function ContactUs() {
                 <h3 className="text-lg lg:text-xl font-bold mb-2 lg:mb-3">Email</h3>
                 <p className="text-sm lg:text-base text-gray-700">
                   <a href="mailto:info@bphgrowth.com" className="hover:opacity-80 transition-opacity">
-                    support@bphgrowth.com
+                    info@bphgrowth.com
                   </a>
                 </p>
               </div>

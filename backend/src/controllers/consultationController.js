@@ -307,7 +307,7 @@ export const submitConsultation = async (req, res) => {
     try {
       // 1. Send confirmation to CUSTOMER
       // FROM: noreply@bphgrowth.com
-      // REPLY-TO: support@bphgrowth.com
+      // REPLY-TO: info@bphgrowth.com
       await sendCustomerEmail({
         to: businessEmail,
         subject: 'Consultation Application Received - BPH Growth',
@@ -321,9 +321,9 @@ export const submitConsultation = async (req, res) => {
 
       // 2. Send alert to ADMIN
       // FROM: noreply@bphgrowth.com
-      // TO: support@bphgrowth.com
+      // TO: info@bphgrowth.com
       await sendAdminEmail({
-        to: process.env.EMAIL_ADMIN || 'support@bphgrowth.com',
+        to: process.env.EMAIL_ADMIN || 'info@bphgrowth.com',
         subject: '🔔 New Consultation Request',
         html: consultationAdminTemplate({
           fullName: consultation.fullName,
@@ -394,7 +394,7 @@ export const approveConsultation = async (req, res) => {
 
     // Send approval email to CUSTOMER
     // FROM: noreply@bphgrowth.com
-    // REPLY-TO: support@bphgrowth.com
+    // REPLY-TO: info@bphgrowth.com
     try {
       await sendCustomerEmail({
         to: consultation.businessEmail,
@@ -441,7 +441,7 @@ export const denyConsultation = async (req, res) => {
 
     // Send denial email to CUSTOMER
     // FROM: noreply@bphgrowth.com
-    // REPLY-TO: support@bphgrowth.com
+    // REPLY-TO: info@bphgrowth.com
     try {
       await sendCustomerEmail({
         to: consultation.businessEmail,

@@ -33,14 +33,14 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 /**
  * Send email to CUSTOMER (automated emails)
  * FROM: noreply@bphgrowth.com
- * REPLY-TO: support@bphgrowth.com
+ * REPLY-TO: info@bphgrowth.com
  */
 export const sendCustomerEmail = async ({ to, subject, html }) => {
   try {
     const { data, error } = await resend.emails.send({
       from: process.env.EMAIL_FROM_NOREPLY || 'BPH Growth <noreply@bphgrowth.com>',
       to: Array.isArray(to) ? to : [to],
-      replyTo: process.env.EMAIL_SUPPORT || 'support@bphgrowth.com',
+      replyTo: process.env.EMAIL_SUPPORT || 'info@bphgrowth.com',
       subject,
       html,
     })
@@ -61,11 +61,11 @@ export const sendCustomerEmail = async ({ to, subject, html }) => {
 /**
  * Send email to ADMIN (alerts/notifications)
  * FROM: noreply@bphgrowth.com
- * TO: support@bphgrowth.com (or specified admin email)
+ * TO: info@bphgrowth.com (or specified admin email)
  */
 export const sendAdminEmail = async ({ to, subject, html }) => {
   try {
-    const adminEmail = to || process.env.EMAIL_ADMIN || 'support@bphgrowth.com'
+    const adminEmail = to || process.env.EMAIL_ADMIN || 'info@bphgrowth.com'
     
     const { data, error } = await resend.emails.send({
       from: process.env.EMAIL_FROM_NOREPLY || 'BPH Growth System <noreply@bphgrowth.com>',

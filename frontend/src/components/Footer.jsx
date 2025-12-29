@@ -71,7 +71,7 @@ function Footer() {
             <h3 className="text-base font-bold mb-4 text-white">Contact us</h3>
             <div className="space-y-3 text-gray-300 text-sm">
               <p className="wrap-break-word">
-                Email: <a href="mailto:support@bphgrowth.com" className="hover:text-white">support@bphgrowth.com</a>
+                Email: <a href="mailto:info@bphgrowth.com" className="hover:text-white">info@bphgrowth.com</a>
               </p>
               <p>Phone: +234 708 009 6148</p>
             </div>

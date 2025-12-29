@@ -76,7 +76,7 @@ function FAQs() {
             <p className="text-xs lg:text-sm tracking-wider mb-2">FREQUENTLY ASKED</p>
             <h2 className="text-4xl lg:text-5xl font-bold mb-3 lg:mb-4">Questions</h2>
             <p className="text-sm lg:text-base text-gray-600">
-              Anything unclear? <a href="mailto:support@bphgrowth.com" className="text-black hover:text-[#60a5fa] transition-colors">support@bphgrowth.com</a>
+              Anything unclear? <a href="mailto:info@bphgrowth.com" className="text-black hover:text-[#60a5fa] transition-colors">info@bphgrowth.com</a>
             </p>
           </div>
 
