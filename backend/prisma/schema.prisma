@@ -156,3 +156,22 @@ model Insight {
 
   @@map("insights")
 }
+
+model Masterclass {
+  id              String   @id @default(auto()) @map("_id") @db.ObjectId
+  title           String
+  description     String
+  category        String
+  facilitatorName String
+  image           String?
+  imagePublicId   String?
+  date            DateTime
+  time            String   // e.g., "10:00 AM WAT"
+  duration        String   // e.g., "2 hours"
+  googleFormUrl   String
+  isActive        Boolean  @default(true)
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+
+  @@map("masterclasses")
+}
