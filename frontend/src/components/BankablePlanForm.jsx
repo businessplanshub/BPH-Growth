@@ -1,11 +1,12 @@
+
 // import { useState, useEffect } from 'react'
 // import Select from 'react-select'
 // import api from '../config/api'
+// import { useNotification } from '../context/NotificationContext'
 
 // function BankablePlanForm() {
+//   const { showSuccess, showError } = useNotification()
 //   const [isSubmitting, setIsSubmitting] = useState(false)
-//   const [submitError, setSubmitError] = useState('')
-//   const [submitSuccess, setSubmitSuccess] = useState(false)
 //   const [availableSlots, setAvailableSlots] = useState([])
 //   const [loadingSlots, setLoadingSlots] = useState(true)
   
@@ -49,7 +50,10 @@
 //       }
 //     } catch (error) {
 //       console.error('Error fetching slots:', error)
-//       setSubmitError('Failed to load available time slots. Please refresh the page.')
+//       showError(
+//         'Failed to load available time slots',
+//         'Please refresh the page to try again.'
+//       )
 //     } finally {
 //       setLoadingSlots(false)
 //     }
@@ -60,7 +64,6 @@
 //       ...formData,
 //       [e.target.name]: e.target.value
 //     })
-//     setSubmitError('')
 //   }
 
 //   const handleSelectChange = (selectedOption, actionMeta) => {
@@ -68,14 +71,11 @@
 //       ...formData,
 //       [actionMeta.name]: selectedOption
 //     })
-//     setSubmitError('')
 //   }
 
 //   const handleSubmit = async (e) => {
 //     e.preventDefault()
 //     setIsSubmitting(true)
-//     setSubmitError('')
-//     setSubmitSuccess(false)
 
 //     try {
 //       // Prepare data for backend
@@ -97,7 +97,11 @@
 //       const response = await api.post('/consultations/submit', submitData)
 
 //       if (response.data.success) {
-//         setSubmitSuccess(true)
+//         // Show success notification
+//         showSuccess(
+//           'Consultation Scheduled Successfully!',
+//           'Check your email for confirmation and appointment details.'
+//         )
         
 //         // Reset form
 //         setFormData({
@@ -114,15 +118,15 @@
 
 //         // Refresh available slots
 //         fetchAvailableSlots()
-
-//         // Hide success message after 5 seconds
-//         setTimeout(() => {
-//           setSubmitSuccess(false)
-//         }, 5000)
 //       }
 //     } catch (error) {
 //       console.error('Error submitting consultation:', error)
-//       setSubmitError(error.response?.data?.message || 'Failed to submit consultation. Please try again.')
+      
+//       // Show error notification
+//       showError(
+//         'Failed to submit consultation application',
+//         'Please refresh and try again.'
+//       )
 //     } finally {
 //       setIsSubmitting(false)
 //     }
@@ -235,21 +239,6 @@
 //             Tell us about your venture and choose your preferred consultation time. Your first 15-minute consultation is free.
 //           </p>
 //         </div>
-
-//         {/* Success Message */}
-//         {submitSuccess && (
-//           <div className="mb-6 bg-green-50 border border-green-200 rounded-xl p-4">
-//             <div className="flex items-center gap-3">
-//               <svg className="w-6 h-6 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-//                 <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
-//               </svg>
-//               <div>
-//                 <p className="text-green-800 font-semibold">Consultation Scheduled Successfully!</p>
-//                 <p className="text-green-700 text-sm">Check your email for confirmation and appointment details.</p>
-//               </div>
-//             </div>
-//           </div>
-//         )}
 
 //         {/* Form */}
 //         <form onSubmit={handleSubmit} className="bg-white rounded-3xl p-6 lg:p-12">
@@ -399,13 +388,6 @@
 //             </div>
 //           </div>
 
-//           {/* Error Message */}
-//           {submitError && (
-//             <div className="mt-4 p-3 bg-red-50 border border-red-200 rounded-lg">
-//               <p className="text-red-600 text-sm">{submitError}</p>
-//             </div>
-//           )}
-
 //           {/* Privacy Policy */}
 //           <p className="text-xs lg:text-sm text-gray-600 mt-4 lg:mt-6 mb-4 lg:mb-6">
 //             By submitting, you agree to our{' '}
@@ -468,6 +450,7 @@ function BankablePlanForm() {
       
       if (response.data.success) {
         // Transform slots into options for react-select
+        // Include date and time for faster submission
         const slotOptions = response.data.data.slots.map(slot => ({
           value: slot.id,
           label: `${new Date(slot.date).toLocaleDateString('en-US', { 
@@ -476,8 +459,8 @@ function BankablePlanForm() {
             day: 'numeric',
             year: 'numeric'
           })} at ${slot.time}`,
-          date: slot.date,
-          time: slot.time
+          date: slot.date,  // Keep for submission
+          time: slot.time   // Keep for submission
         }))
         
         setAvailableSlots(slotOptions)
@@ -512,7 +495,7 @@ function BankablePlanForm() {
     setIsSubmitting(true)
 
     try {
-      // Prepare data for backend
+      // Prepare data for backend - include slot date/time for faster processing
       const submitData = {
         fullName: formData.fullName,
         businessEmail: formData.businessEmail,
@@ -522,7 +505,10 @@ function BankablePlanForm() {
         primaryServiceInterest: formData.primaryServiceInterest?.value || '',
         targetFundingAmount: formData.targetFundingAmount?.value || '',
         businessSummary: formData.businessSummary,
-        slotId: formData.selectedSlot?.value
+        slotId: formData.selectedSlot?.value,
+        // Pass slot date/time to avoid re-fetching on backend
+        slotDate: formData.selectedSlot?.date,
+        slotTime: formData.selectedSlot?.time
       }
 
       console.log('📤 Submitting consultation:', submitData)
